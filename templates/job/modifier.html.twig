@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Poste{% endblock %}
+
+{% block body %}
+<h5>{{modification_name}}</h5>
+<form>
+  <div class="container">
+    <label for="exampleInputEmail1">Intitulé du Job</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="container">
+    <label for="exampleInputPassword1">Description</label>
+    <input type="email" class="form-control" id="exampleInputPassword1">
+  </div>
+   <div class="container">
+    <label for="société">Société</label>
+    <input type="société" class="form-control" id="société" aria-describedby="emailHelp">
+  </div>
+  <div class="col-md-3 text-center" style="margin:10px">
+  <button type="ajouter" class="btn btn-primary">Modifier</button>
+  </div>
+</form>
+{% endblock %}
