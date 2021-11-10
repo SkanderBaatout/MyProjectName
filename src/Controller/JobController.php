@@ -69,5 +69,35 @@ class JobController extends AbstractController
            'list_name' => 'Page affichage des jobs',
             ]);
     }
+     /**
+    * @Route("/menu",name="menu")
+    */
+    public function menu(): Response
+    {
+        $mymenu=array(
+            ['route'=> 'job' ,'intitulé'=>'Accueil'],
+            ['route'=> 'ajouter' ,'intitulé'=>'Ajouter un job'],
+            ['route'=> 'list' ,'intitulé'=>'Afficher tous les jobs'],
+
+        );
+        return $this->render('job/menu.html.twig', [
+           'mymenu' => $mymenu,
+            ]);
+    }
+    /**
+    * @Route("/sidebar",name="sidebar")
+    */
+    public function sidebar(): Response
+    {
+        $listjobs=array(
+            ['id'=> 1 ,'nomjob'=>'Developpeur web'],
+            ['id'=> 2 ,'nomjob'=>'Responsable marketing'],
+            ['id'=> 3 ,'nomjob'=>'Team leader'],
+
+        );
+        return $this->render('job/sidebar.html.twig', [
+           'listjobs' => $listjobs,
+            ]);
+    }
    
 }

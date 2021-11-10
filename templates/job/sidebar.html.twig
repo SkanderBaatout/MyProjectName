@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+ {% block sidebar %}
+
+<ul class="nav flex-column">
+{% for item in listjobs %}
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{{ item.id }}">{{ item.nomjob }}</a>
+    {% if item.nomjob == "Developpeur web" %}
+     <p style="color:#FF0000";>Developpeur web</p>
+    {% endif %}
+  </li>
+
+  {% endfor %}
+</ul>
+ {% endblock sidebar %}
